@@ -69,7 +69,7 @@
   ![image](https://github.com/JoseVazquez101/Buffer-Overflow-from-32-bit-binary/assets/111292579/e0f23b1c-669a-42e6-8a6d-17d34c46275e)
 
   
-  1. **CANARY (DEP):** (DEP, Data Execution Prevention) se refiere a la técnica de seguridad que evita que datos no ejecutables se ejecuten como código. Está deshabilitado
+1. **CANARY (DEP):** (DEP, Data Execution Prevention) se refiere a la técnica de seguridad que evita que datos no ejecutables se ejecuten como código. Está deshabilitado
     
 2. **FORTIFY:** Esta característica se refiere a las mejoras de seguridad en funciones estándar de la biblioteca C para proteger contra desbordamientos de búfer y otros errores comunes de programación. Está deshabilitado
 
