@@ -3,8 +3,10 @@
 ***
 
   <h5>Enumeración</h5>
-  
-- En este caso, trabajaremos y analizaremos de manera basica la enumeración y explotación de un binario que poseé permisos de sudores llamado `custom`, el cual nos solicita una cadena como argumento para ejecutarlo:
+
+- (El binario customizado no es mio, pertenece a una practica del curso de S4vitar, [Hack4u/introducción al hacking](https://hack4u.io/))
+ 
+- En este caso, trabajaremos y analizaremos de manera basica la enumeración y explotación de un [binario](https://github.com/JoseVazquez101/Buffer-Overflow-from-32-bit-binary/blob/main/Files/custom) que poseé permisos de sudores llamado `custom`, el cual nos solicita una cadena como argumento para ejecutarlo:
   ![image](https://github.com/JoseVazquez101/Buffer-Overflow-from-32-bit-binary/assets/111292579/f20f55bc-4618-4d34-aaf0-e19a9e3e22a7)
 
 - Probamos meter una cadena mas grande, pero vemos algo curioso. Al parecer después de ciertos caracteres podemos causar un `segmentation fault` , es decir, la variable que almacena nuestra cadena se sobrepasa a lo que puede contener
@@ -135,7 +137,7 @@ strings -a -t x /lib/i386-linux-gnu/libc.so.6 | grep /bin/sh
 ~~~
 ![image](https://github.com/JoseVazquez101/Buffer-Overflow-from-32-bit-binary/assets/111292579/3040ce98-a187-4db9-9153-e76fb3979bf3)
 
-- Me cree un archivo de Python/bash el cual automatiza un poco las ejecuciones y nos obtiene los valores de memoria necesarios para la explotación, pueden revisarlo y verám que sigue los mismos puntos tocados anteriormente
+- Me cree un [script](https://github.com/JoseVazquez101/Buffer-Overflow-from-32-bit-binary/blob/main/Files/buff-ov.sh) de Python/bash el cual automatiza un poco las ejecuciones y nos obtiene los valores de memoria necesarios para la explotación, pueden revisarlo y verám que sigue los mismos puntos tocados anteriormente
 
 - Y funciona, somos root :D
   ![image](https://github.com/JoseVazquez101/Buffer-Overflow-from-32-bit-binary/assets/111292579/cc6f1d7e-4505-4143-8be2-bfcbbacf6eba)
