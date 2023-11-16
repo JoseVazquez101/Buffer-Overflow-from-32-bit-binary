@@ -2,6 +2,12 @@
 
 binary_target="$1"
 
+if [ -z "$binary_target" ]; then
+    echo "[!] ERROR: Objetivo no especificado"
+    echo "Uso: $0 </ruta/binario/objetivo>"
+    exit 1
+fi
+
 # Encuentra los valores de memoria necesarios
 overflow=112 #change this
 base_libc_mem=$(ldd "$binary_target" | grep libc | awk 'NF{print($NF)}' | tr -d '()' | sed 's/^0x//')
