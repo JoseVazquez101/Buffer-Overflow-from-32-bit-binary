@@ -103,6 +103,7 @@ ret2libc = system + exit + bin_sh
   ![image](https://github.com/JoseVazquez101/Buffer-Overflow-from-32-bit-binary/assets/111292579/4977be53-a993-4a8e-b509-7d51b8bc2440)
 
 - Como nos encontramos en una maquina de 32 bits, las direcciones de memoria no son tan largas, y hay mayor probabilidad de que estas se repitan en rangos de ejecución muy largos, por ejemplo, si ejecutamos mil veces y greppeamos por una dirección `0xb7d2a000` la veremos varias veces:
+
 ![image](https://github.com/JoseVazquez101/Buffer-Overflow-from-32-bit-binary/assets/111292579/5f0f64b2-aaef-49d2-b7aa-6148e98b3b2e)
 
 - Algo sumamente practico que podemos hacer, es ver cuanto vale system, exit y /bin/sh de la siguiente forma
