@@ -142,7 +142,5 @@ strings -a -t x /lib/i386-linux-gnu/libc.so.6 | grep /bin/sh
 
 - Me cree un [script](https://github.com/JoseVazquez101/Buffer-Overflow-from-32-bit-binary/blob/main/Files/buff-ov.sh) de Python/bash el cual automatiza un poco las ejecuciones y nos obtiene los valores de memoria necesarios para la explotación, pueden revisarlo y verám que sigue los mismos puntos tocados anteriormente
 
-- Y funciona, somos root :D
-  ![image](https://github.com/JoseVazquez101/Buffer-Overflow-from-32-bit-binary/assets/111292579/cc6f1d7e-4505-4143-8be2-bfcbbacf6eba)
 
   
