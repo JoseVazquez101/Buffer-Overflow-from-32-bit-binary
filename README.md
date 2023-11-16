@@ -6,7 +6,10 @@
 
 - (El binario customizado no es mio, pertenece a una practica del curso de S4vitar, [Hack4u/introducción al hacking](https://hack4u.io/))
  
-- En este caso, trabajaremos y analizaremos de manera basica la enumeración y explotación de un [binario](https://github.com/JoseVazquez101/Buffer-Overflow-from-32-bit-binary/blob/main/Files/custom) que poseé permisos de sudores llamado `custom`, el cual nos solicita una cadena como argumento para ejecutarlo:
+- En este caso, trabajaremos y analizaremos de manera basica la enumeración y explotación de un [binario](https://github.com/JoseVazquez101/Buffer-Overflow-from-32-bit-binary/blob/main/Files/custom) que poseé permisos de sudores llamado `custom`. Podemos asignarselos desde la ruta /etc/sudoers
+  ![image](https://github.com/JoseVazquez101/Buffer-Overflow-from-32-bit-binary/assets/111292579/a9da53bd-6e2a-4259-bd19-b31cbc53fc96)
+
+- El binario nos solicita una cadena como argumento para ejecutarlo:
   ![image](https://github.com/JoseVazquez101/Buffer-Overflow-from-32-bit-binary/assets/111292579/f20f55bc-4618-4d34-aaf0-e19a9e3e22a7)
 
 - Probamos meter una cadena mas grande, pero vemos algo curioso. Al parecer después de ciertos caracteres podemos causar un `segmentation fault` , es decir, la variable que almacena nuestra cadena se sobrepasa a lo que puede contener
